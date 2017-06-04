@@ -1,0 +1,23 @@
+PODS:
+  - PureLayout (3.0.2)
+  - TwilioVideo (1.0.1)
+  - TWTwilioVideoReactNative (1.0.1):
+    - TwilioVideo (~> 1.0.1)
+
+DEPENDENCIES:
+  - PureLayout
+  - TwilioVideo (~> 1.0.1)
+  - TWTwilioVideoReactNative (from `../../`)
+
+EXTERNAL SOURCES:
+  TWTwilioVideoReactNative:
+    :path: "../../"
+
+SPEC CHECKSUMS:
+  PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
+  TwilioVideo: 2a41b5557ab6dc343beb57e395fdc4da5a6e3450
+  TWTwilioVideoReactNative: 45667bd21eb74076bc14aacce4399bf8cc3f4186
+
+PODFILE CHECKSUM: 48c5950c3e58209ac2166ee0cf4da5dd215a8688
+
+COCOAPODS: 1.2.1

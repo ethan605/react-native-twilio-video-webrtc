@@ -1,7 +1,7 @@
 {
   "name": "react-native-twilio-video-webrtc",
   "keywords": "react-native",  
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Twilio Video (WebRTC) iOS Wrapper for React Native",
   "main": "index.js",
   "license": "MIT",
@@ -14,7 +14,7 @@
   "devDependencies": {
   },
   "dependencies": {
-    "react-native": "^0.30.0"
+    "react-native": "^0.44.2"
   },
   "scripts": {
     

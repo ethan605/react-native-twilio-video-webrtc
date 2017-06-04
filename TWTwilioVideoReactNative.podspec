@@ -24,13 +24,8 @@ Pod::Spec.new do |s|
   # s.exclude_files = "Classes/Exclude"
 
   # This is the key line. You must add it by hand.
-  s.dependency 'TwilioVideo', '1.0.0-beta1'
+  s.dependency 'TwilioVideo', '~> 1.0.1'
   s.dependency 'PureLayout', '~> 3.0.2'
-
+  # s.xcconfig = { 'CLANG_ENABLE_MODULES' => 'NO' }
 end
 
-# platform :ios, '9.0'
-# source 'https://github.com/CocoaPods/Specs.git'
-# source 'https://github.com/twilio/cocoapod-specs'
-# pod 'PureLayout'
-# pod 'TwilioVideo', '1.0.0-beta1'

@@ -1,32 +1,9 @@
-# react-native-twilio-video-webrtc
-Twilio Video (WebRTC) iOS Wrapper for React Native
-
-
-# Installation
-If react-native >= 0.40.0: install react-native-twilio-video-webrtc@1.1.*
-
-If react-native < 0.40.0: install react-native-twilio-video-webrtc@1.0.*
-
-
-Go to your project directory and run these in your terminal:
-
-```
-yarn add https://github.com/gaston23/react-native-twilio-video-webrtc
-react-native link react-native-twilio-video-webrtc
-```
-
-Open project in Xcode. Click Project in the left pane and go to the tab `General`. Then add Embedded Framework. Click `Add another` and go to `node_modules/react-native-twilio-video-webrtc`. Select TwilioVideo.framework. Select `Copy items if needed`.
-
-
-# Usage
-
-Note: This is a illustrative example. Not intended to be workable.
-
-````javascript
-
 import React, { Component } from 'react'
 import {
   View,
+  AppRegistry,
+  Text,
+  TouchableOpacity
 } from 'react-native'
 
 import {
@@ -34,8 +11,6 @@ import {
   TwilioVideoPreview, 
   TwilioVideo
 } from 'react-native-twilio-video-webrtc'
-
-import Button from 'react-native-button'
 
 class App extends Component {
 
@@ -51,7 +26,10 @@ class App extends Component {
   }
 
   _onConnectButtonPress = () => {
-    this.startCall({roomName: "ROOM_NAME_HERE", accessToken: "TWILIO_ACCESS_TOKEN_HERE"})
+    this.startCall({
+      roomName: "ROOM_NAME_HERE", 
+      accessToken: "TWILIO_ACCESS_TOKEN_HERE"
+    })
     // Note: You get TWILIO_ACCESS_TOKEN_HERE from your server probably
   }
 
@@ -104,10 +82,8 @@ class App extends Component {
         </Button>
 
       </View>
-    );
+    )
   }
 }
 
-
-AppRegistry.registerComponent('app', () => App);
-````
+AppRegistry.registerComponent('rntwilioexample', () => App)

@@ -1,0 +1,612 @@
+require "json"
+
+package = JSON.parse(File.read(File.join(__dir__, "package.json")))
+
+Pod::Spec.new do |s|
+
+  s.name         = "TWTwilioVideoReactNative"
+  s.version      = package["version"]
+  s.summary      = "Twilio Video WebRTC for React Native."
+
+  # s.description  = <<-DESC
+  #                   Twilio Video WebRTC for React Native. 
+  #                  DESC
+
+  s.homepage     = "https://github.com/gaston23/react-native-twilio-video-webrtc"
+
+  s.license      = "MIT"
+
+  s.author       = { "Gaston Morixe" => "gaston@black.uy" }
+
+  s.source       = { git: "https://github.com/gaston23/react-native-twilio-video-webrtc", tag: "#{s.version}" }
+
+  s.source_files  = "Classes", "**/*.{h,m}"
+  # s.exclude_files = "Classes/Exclude"
+
+  # This is the key line. You must add it by hand.
+  s.dependency 'TwilioVideo', '~> 1.0.1'
+  # s.dependency 'PureLayout', '~> 3.0.2'
+
+drwxr-xr-x   22 gaston  staff   748B Jun  3 19:17 ./
+drwxr-xr-x    8 gaston  staff   272B Jun  3 17:39 ../
+-rw-r--r--@   1 gaston  staff    10K Jun  3 19:30 .DS_Store
+drwxr-xr-x   17 gaston  staff   578B Jun  3 19:31 .git/
+-rw-r--r--    1 gaston  staff   1.4K May 30 20:40 .gitignore
+drwxr-xr-x   18 gaston  staff   612B Jun  3 19:16 example/
+-rw-r--r--    1 gaston  staff   212B May 30 20:40 index.js
+drwxr-xr-x   11 gaston  staff   374B May 30 20:40 ios/
+-rw-r--r--    1 gaston  staff   1.0K May 30 20:40 LICENSE
+drwxr-xr-x  472 gaston  staff    16K Jun  3 19:13 node_modules/
+-rw-r--r--    1 gaston  staff   539B Jun  3 18:54 package.json
+-rw-r--r--    1 gaston  staff   723B Jun  3 17:51 Podfile
+-rw-r--r--    1 gaston  staff   327B May 30 20:40 Podfile.lock
+drwxr-xr-x   10 gaston  staff   340B May 30 20:40 Pods/
+-rw-r--r--    1 gaston  staff   2.3K May 30 20:40 README.md
+-rw-r--r--    1 gaston  staff   400B Jun  3 19:12 TwilioRemotePreview.js
+-rw-r--r--    1 gaston  staff   4.2K Jun  3 19:09 TwilioVideo.js
+-rw-r--r--    1 gaston  staff   324B May 30 20:40 TwilioVideo.test.js
+-rw-r--r--    1 gaston  staff   395B Jun  3 19:12 TwilioVideoPreview.js
+drwxr-xr-x    4 gaston  staff   136B Jun  3 18:00 TWReactNativeTwilioVideoWebrtc.xcworkspace/
+-rw-r--r--    1 gaston  staff   874B Jun  3 19:30 TWTwilioVideoReactNative.podspec
+-rw-r--r--    1 gaston  staff   114K Jun  3 19:13 yarn.lock
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on master ⨯ nano                                   19:31:20
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on master ⨯ nano Podfile                           19:31:26
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on master ⨯ nano Podfile                           19:31:37
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on master ⨯ gem uninstall cocoapods                19:32:06
+
+Select gem to uninstall:
+ 1. cocoapods-1.2.0
+ 2. cocoapods-1.2.1
+ 3. All versions
+> 3
+Successfully uninstalled cocoapods-1.2.0
+Remove executables:
+	pod, sandbox-pod
+
+in addition to the gem? [Yn]  Y
+Removing pod
+Removing sandbox-pod
+Successfully uninstalled cocoapods-1.2.1
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on master ⨯ gem install coco^C
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on master ⨯ rvm use                                19:32:41
+Using /Users/gaston/.rvm/gems/ruby-2.4.0
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on master ⨯ rvm list                               19:32:44
+
+rvm rubies
+
+=* ruby-2.4.0 [ x86_64 ]
+
+# => - current
+# =* - current && default
+#  * - default
+
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on master ⨯ gem install cocoapods                  19:32:48
+Fetching: cocoapods-1.2.1.gem (100%)
+Successfully installed cocoapods-1.2.1
+1 gem installed
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on master ⨯ pod repo remove master                 19:32:57
+Removing spec repo `master`
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on master ⨯ pod setup                              19:35:51
+Setting up CocoaPods master repo
+  $ /usr/bin/git clone https://github.com/CocoaPods/Specs.git master --progress
+  Cloning into 'master'...
+  remote: Counting objects: 1316313, done.
+  remote: Compressing objects: 100% (3820/3820), done.
+  remote: Total 1316313 (delta 3002), reused 3712 (delta 1598), pack-reused 1310598
+  Receiving objects: 100% (1316313/1316313), 402.82 MiB | 4.94 MiB/s, done.
+  Resolving deltas:  97% (636408/655970)
+
+
+  Resolving deltas: 100% (655970/655970), done.
+  Checking out files: 100% (160138/160138), done.
+Setup completed
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on master ⨯                                        19:45:56
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on master ⨯                                        19:45:56
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on master ⨯                                        19:45:56
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on master ⨯ brew update                            19:45:56
+Updated 3 taps (caskroom/cask, homebrew/core, homebrew/science).
+==> Updated Formulae
+ammonite-repl             awscli ✔                  homebrew/science/libccd   pre-commit
+apache-flink              bee                       kapacitor                 pyinvoke
+aws-sdk-cpp               fluent-bit                neo4j                     swiftformat
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on master ⨯ brew uninstall watchman                20:28:32
+Error: No such keg: /usr/local/Cellar/watchman
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on master ⨯
+chmod 0700 /usr/local/var/run/watchman/gaston-state
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on master ⨯ chmod 0700 -R /usr/local/var/run/      21:28:21
+chmod: -R: No such file or directory
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on master ⨯ chmod -R 0700  /usr/local/var/run/     21:28:30
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on master ⨯                                        21:28:37
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1                                   22:46:44
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1                                   22:46:44
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1                                   22:46:45
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1                                   22:46:45
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯ pod --version                   12:30:42
+1.2.1
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯                                 13:13:51
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯                                 13:19:06
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯                                 13:19:06
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯                                 13:19:07
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯                                 13:19:07
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯ ll                              13:19:07
+total 352
+drwxr-xr-x   18 gaston  staff   612B Jun  4 13:20 ./
+drwxr-xr-x    8 gaston  staff   272B Jun  3 17:39 ../
+-rw-r--r--@   1 gaston  staff    12K Jun  4 12:35 .DS_Store
+drwxr-xr-x   17 gaston  staff   578B Jun  4 13:23 .git/
+-rw-r--r--    1 gaston  staff   1.4K Jun  3 21:45 .gitignore
+drwxr-xr-x   18 gaston  staff   612B Jun  4 12:36 example/
+-rw-r--r--    1 gaston  staff   212B May 30 20:40 index.js
+drwxr-xr-x   10 gaston  staff   340B Jun  4 13:20 ios/
+-rw-r--r--    1 gaston  staff   1.0K May 30 20:40 LICENSE
+drwxr-xr-x  472 gaston  staff    16K Jun  3 19:13 node_modules/
+-rw-r--r--    1 gaston  staff   539B Jun  3 18:54 package.json
+-rw-r--r--    1 gaston  staff   2.9K Jun  3 20:22 README.md
+-rw-r--r--    1 gaston  staff   400B Jun  3 19:12 TwilioRemotePreview.js
+-rw-r--r--    1 gaston  staff   4.2K Jun  3 19:09 TwilioVideo.js
+-rw-r--r--    1 gaston  staff   324B May 30 20:40 TwilioVideo.test.js
+-rw-r--r--    1 gaston  staff   395B Jun  3 19:12 TwilioVideoPreview.js
+-rw-r--r--    1 gaston  staff   876B Jun  4 13:20 TWTwilioVideoReactNative.podspec
+-rw-r--r--    1 gaston  staff   114K Jun  3 19:13 yarn.lock
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯ cat TWTwilioVideoReactNative.podspec
+require "json"
+
+package = JSON.parse(File.read(File.join(__dir__, "package.json")))
+
+Pod::Spec.new do |s|
+
+  s.name         = "TWTwilioVideoReactNative"
+  s.version      = package["version"]
+  s.summary      = "Twilio Video WebRTC for React Native."
+
+  # s.description  = <<-DESC
+  #                   Twilio Video WebRTC for React Native.
+  #                  DESC
+
+  s.homepage     = "https://github.com/gaston23/react-native-twilio-video-webrtc"
+
+  s.license      = "MIT"
+
+  s.author       = { "Gaston Morixe" => "gaston@black.uy" }
+
+  s.source       = { git: "https://github.com/gaston23/react-native-twilio-video-webrtc", tag: "#{s.version}" }
+
+  s.source_files  = "Classes", "**/*.{h,m}"
+  # s.exclude_files = "Classes/Exclude"
+
+  # This is the key line. You must add it by hand.
+  s.dependency 'TwilioVideo', '~> 1.0.1'
+  # s.dependency 'PureLayout', '~> 3.0.2'
+
+end
+
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯ ..                              13:24:03
+⋊> ~/D/P/twilio cd react-native-twilio-video-webrtc/                                           13:48:33
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯ pod install                     13:48:35
+
+[!] Invalid `Podfile` file: The target `Pods` already has a platform set..
+
+ #  from /Users/gaston/Documents/Projects/twilio/react-native-twilio-video-webrtc/Podfile:7
+ #  -------------------------------------------
+ #  # Uncomment the next line to define a global platform for your project
+ >  platform :ios, '9.0'
+ #
+ #  -------------------------------------------
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯ nano Podfile                    13:48:40
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯ pod install                     13:49:13
+Analyzing dependencies
+[!] Unable to find host target(s) for TWReactNativeTwilioVideoWebrtc. Please add the host targets for the embedded targets to the Podfile.
+Certain kinds of targets require a host target. A host target is a "parent" target which embeds a "child" target. These are example types of targets that need a host target:
+- Framework
+- App Extension
+- Watch OS 1 Extension
+- Messages Extension (except when used with a Messages Application)
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯ nano Podfile                    13:49:16
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯ ll                              13:49:28
+total 368
+drwxr-xr-x   21 gaston  staff   714B Jun  4 13:49 ./
+drwxr-xr-x    8 gaston  staff   272B Jun  3 17:39 ../
+-rw-r--r--@   1 gaston  staff    14K Jun  4 13:49 .DS_Store
+drwxr-xr-x   17 gaston  staff   578B Jun  4 13:49 .git/
+-rw-r--r--    1 gaston  staff   1.4K Jun  3 21:45 .gitignore
+drwxr-xr-x   18 gaston  staff   612B Jun  4 12:36 example/
+-rw-r--r--    1 gaston  staff   212B May 30 20:40 index.js
+drwxr-xr-x   10 gaston  staff   340B Jun  4 13:20 ios/
+-rw-r--r--    1 gaston  staff   1.0K May 30 20:40 LICENSE
+drwxr-xr-x  472 gaston  staff    16K Jun  3 19:13 node_modules/
+-rw-r--r--    1 gaston  staff   539B Jun  3 18:54 package.json
+-rw-r--r--    1 gaston  staff   194B Jun  4 13:49 Podfile
+-rw-r--r--    1 gaston  staff   327B May 30 20:40 Podfile.lock
+drwxr-xr-x    6 gaston  staff   204B Jun  4 13:49 Pods/
+-rw-r--r--    1 gaston  staff   2.9K Jun  3 20:22 README.md
+-rw-r--r--    1 gaston  staff   400B Jun  3 19:12 TwilioRemotePreview.js
+-rw-r--r--    1 gaston  staff   4.2K Jun  3 19:09 TwilioVideo.js
+-rw-r--r--    1 gaston  staff   324B May 30 20:40 TwilioVideo.test.js
+-rw-r--r--    1 gaston  staff   395B Jun  3 19:12 TwilioVideoPreview.js
+-rw-r--r--    1 gaston  staff   876B Jun  4 13:20 TWTwilioVideoReactNative.podspec
+-rw-r--r--    1 gaston  staff   114K Jun  3 19:13 yarn.lock
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯ nano Podfile                    13:49:42
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯ pod install                     13:50:16
+Analyzing dependencies
+[!] Unable to find host target(s) for TWReactNativeTwilioVideoWebrtc. Please add the host targets for the embedded targets to the Podfile.
+Certain kinds of targets require a host target. A host target is a "parent" target which embeds a "child" target. These are example types of targets that need a host target:
+- Framework
+- App Extension
+- Watch OS 1 Extension
+- Messages Extension (except when used with a Messages Application)
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯ ll                              13:50:18
+total 368
+drwxr-xr-x   22 gaston  staff   748B Jun  4 13:50 ./
+drwxr-xr-x    8 gaston  staff   272B Jun  3 17:39 ../
+-rw-r--r--@   1 gaston  staff    14K Jun  4 13:50 .DS_Store
+drwxr-xr-x   17 gaston  staff   578B Jun  4 13:50 .git/
+-rw-r--r--    1 gaston  staff   1.4K Jun  3 21:45 .gitignore
+drwxr-xr-x   18 gaston  staff   612B Jun  4 12:36 example/
+-rw-r--r--    1 gaston  staff   212B May 30 20:40 index.js
+drwxr-xr-x   10 gaston  staff   340B Jun  4 13:20 ios/
+-rw-r--r--    1 gaston  staff   1.0K May 30 20:40 LICENSE
+drwxr-xr-x  472 gaston  staff    16K Jun  3 19:13 node_modules/
+-rw-r--r--    1 gaston  staff   539B Jun  3 18:54 package.json
+-rw-r--r--    1 gaston  staff   194B Jun  4 13:49 Podfile
+-rw-r--r--    1 gaston  staff   327B May 30 20:40 Podfile.lock
+drwxr-xr-x    6 gaston  staff   204B Jun  4 13:50 Pods/
+-rw-r--r--    1 gaston  staff   2.9K Jun  3 20:22 README.md
+-rw-r--r--    1 gaston  staff   400B Jun  3 19:12 TwilioRemotePreview.js
+-rw-r--r--    1 gaston  staff   4.2K Jun  3 19:09 TwilioVideo.js
+-rw-r--r--    1 gaston  staff   324B May 30 20:40 TwilioVideo.test.js
+-rw-r--r--    1 gaston  staff   395B Jun  3 19:12 TwilioVideoPreview.js
+drwxr-xr-x    4 gaston  staff   136B Jun  3 18:00 TWReactNativeTwilioVideoWebrtc.xcworkspace/
+-rw-r--r--    1 gaston  staff   876B Jun  4 13:20 TWTwilioVideoReactNative.podspec
+-rw-r--r--    1 gaston  staff   114K Jun  3 19:13 yarn.lock
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯ rm Podfile.lock                 13:50:20
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯ rm -rf Pods/                    13:51:08
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯ pod install                     13:51:13
+Analyzing dependencies
+[!] Unable to find host target(s) for TWReactNativeTwilioVideoWebrtc. Please add the host targets for the embedded targets to the Podfile.
+Certain kinds of targets require a host target. A host target is a "parent" target which embeds a "child" target. These are example types of targets that need a host target:
+- Framework
+- App Extension
+- Watch OS 1 Extension
+- Messages Extension (except when used with a Messages Application)
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯ nano Podfile                    13:51:21
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯ rm Podfile                      13:51:27
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯ pod init                        13:51:29
+[!] No Xcode project found, please specify one
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯
+pod init ios/TWReactNativeTwilioVideoWebrtc.xcodeproj
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯ ll                              13:51:42
+total 360
+drwxr-xr-x   21 gaston  staff   714B Jun  4 13:51 ./
+drwxr-xr-x    8 gaston  staff   272B Jun  3 17:39 ../
+-rw-r--r--@   1 gaston  staff    14K Jun  4 13:51 .DS_Store
+drwxr-xr-x   17 gaston  staff   578B Jun  4 13:51 .git/
+-rw-r--r--    1 gaston  staff   1.4K Jun  3 21:45 .gitignore
+drwxr-xr-x   18 gaston  staff   612B Jun  4 12:36 example/
+-rw-r--r--    1 gaston  staff   212B May 30 20:40 index.js
+drwxr-xr-x   10 gaston  staff   340B Jun  4 13:20 ios/
+-rw-r--r--    1 gaston  staff   1.0K May 30 20:40 LICENSE
+drwxr-xr-x  472 gaston  staff    16K Jun  3 19:13 node_modules/
+-rw-r--r--    1 gaston  staff   539B Jun  3 18:54 package.json
+-rw-r--r--    1 gaston  staff   354B Jun  4 13:51 Podfile
+drwxr-xr-x    6 gaston  staff   204B Jun  4 13:51 Pods/
+-rw-r--r--    1 gaston  staff   2.9K Jun  3 20:22 README.md
+-rw-r--r--    1 gaston  staff   400B Jun  3 19:12 TwilioRemotePreview.js
+-rw-r--r--    1 gaston  staff   4.2K Jun  3 19:09 TwilioVideo.js
+-rw-r--r--    1 gaston  staff   324B May 30 20:40 TwilioVideo.test.js
+-rw-r--r--    1 gaston  staff   395B Jun  3 19:12 TwilioVideoPreview.js
+drwxr-xr-x    4 gaston  staff   136B Jun  3 18:00 TWReactNativeTwilioVideoWebrtc.xcworkspace/
+-rw-r--r--    1 gaston  staff   876B Jun  4 13:20 TWTwilioVideoReactNative.podspec
+-rw-r--r--    1 gaston  staff   114K Jun  3 19:13 yarn.lock
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯ nano Podfile                    13:51:43
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯ pod install                     13:52:01
+Analyzing dependencies
+[!] Unable to find host target(s) for TWReactNativeTwilioVideoWebrtc. Please add the host targets for the embedded targets to the Podfile.
+Certain kinds of targets require a host target. A host target is a "parent" target which embeds a "child" target. These are example types of targets that need a host target:
+- Framework
+- App Extension
+- Watch OS 1 Extension
+- Messages Extension (except when used with a Messages Application)
+
+[!] Automatically assigning platform ios with version 9.0 on target TWReactNativeTwilioVideoWebrtc because no platform was specified. Please specify a platform for this target in your Podfile. See `https://guides.cocoapods.org/syntax/podfile.html#platform`.
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯ nano Podfile                    13:52:04
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯ pod install                     13:52:47
+Analyzing dependencies
+[!] Unable to find host target(s) for TWReactNativeTwilioVideoWebrtc. Please add the host targets for the embedded targets to the Podfile.
+Certain kinds of targets require a host target. A host target is a "parent" target which embeds a "child" target. These are example types of targets that need a host target:
+- Framework
+- App Extension
+- Watch OS 1 Extension
+- Messages Extension (except when used with a Messages Application)
+
+[!] Automatically assigning platform ios with version 9.0 on target TWReactNativeTwilioVideoWebrtc because no platform was specified. Please specify a platform for this target in your Podfile. See `https://guides.cocoapods.org/syntax/podfile.html#platform`.
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯ nano Podfile                    13:52:50
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯ nano Podfile                    13:53:14
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯ pod install                     13:53:50
+Analyzing dependencies
+[!] Unable to find host target(s) for TWReactNativeTwilioVideoWebrtc. Please add the host targets for the embedded targets to the Podfile.
+Certain kinds of targets require a host target. A host target is a "parent" target which embeds a "child" target. These are example types of targets that need a host target:
+- Framework
+- App Extension
+- Watch OS 1 Extension
+- Messages Extension (except when used with a Messages Application)
+
+[!] Automatically assigning platform ios with version 9.0 on target TWReactNativeTwilioVideoWebrtc because no platform was specified. Please specify a platform for this target in your Podfile. See `https://guides.cocoapods.org/syntax/podfile.html#platform`.
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯ pod install                     13:53:52
+Analyzing dependencies
+[!] Unable to find host target(s) for TWReactNativeTwilioVideoWebrtc. Please add the host targets for the embedded targets to the Podfile.
+Certain kinds of targets require a host target. A host target is a "parent" target which embeds a "child" target. These are example types of targets that need a host target:
+- Framework
+- App Extension
+- Watch OS 1 Extension
+- Messages Extension (except when used with a Messages Application)
+
+[!] Automatically assigning platform ios with version 10.3 on target TWReactNativeTwilioVideoWebrtc because no platform was specified. Please specify a platform for this target in your Podfile. See `https://guides.cocoapods.org/syntax/podfile.html#platform`.
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯                                 13:58:24
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯                                 13:59:12
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯ pod install                     13:59:12
+Analyzing dependencies
+[!] Unable to find host target(s) for TWReactNativeTwilioVideoWebrtc. Please add the host targets for the embedded targets to the Podfile.
+Certain kinds of targets require a host target. A host target is a "parent" target which embeds a "child" target. These are example types of targets that need a host target:
+- Framework
+- App Extension
+- Watch OS 1 Extension
+- Messages Extension (except when used with a Messages Application)
+
+[!] Automatically assigning platform ios with version 10.3 on target TWReactNativeTwilioVideoWebrtc because no platform was specified. Please specify a platform for this target in your Podfile. See `https://guides.cocoapods.org/syntax/podfile.html#platform`.
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯ ll                              13:59:15
+total 360
+drwxr-xr-x   21 gaston  staff   714B Jun  4 13:51 ./
+drwxr-xr-x    8 gaston  staff   272B Jun  3 17:39 ../
+-rw-r--r--@   1 gaston  staff    14K Jun  4 13:59 .DS_Store
+drwxr-xr-x   17 gaston  staff   578B Jun  4 13:59 .git/
+-rw-r--r--    1 gaston  staff   1.4K Jun  3 21:45 .gitignore
+drwxr-xr-x   18 gaston  staff   612B Jun  4 12:36 example/
+-rw-r--r--    1 gaston  staff   212B May 30 20:40 index.js
+drwxr-xr-x   11 gaston  staff   374B Jun  4 13:58 ios/
+-rw-r--r--    1 gaston  staff   1.0K May 30 20:40 LICENSE
+drwxr-xr-x  472 gaston  staff    16K Jun  3 19:13 node_modules/
+-rw-r--r--    1 gaston  staff   539B Jun  3 18:54 package.json
+-rw-r--r--    1 gaston  staff   197B Jun  4 13:53 Podfile
+drwxr-xr-x    6 gaston  staff   204B Jun  4 13:59 Pods/
+-rw-r--r--    1 gaston  staff   2.9K Jun  3 20:22 README.md
+-rw-r--r--    1 gaston  staff   400B Jun  3 19:12 TwilioRemotePreview.js
+-rw-r--r--    1 gaston  staff   4.2K Jun  3 19:09 TwilioVideo.js
+-rw-r--r--    1 gaston  staff   324B May 30 20:40 TwilioVideo.test.js
+-rw-r--r--    1 gaston  staff   395B Jun  3 19:12 TwilioVideoPreview.js
+drwxr-xr-x    4 gaston  staff   136B Jun  3 18:00 TWReactNativeTwilioVideoWebrtc.xcworkspace/
+-rw-r--r--    1 gaston  staff   876B Jun  4 13:20 TWTwilioVideoReactNative.podspec
+-rw-r--r--    1 gaston  staff   114K Jun  3 19:13 yarn.lock
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯
+rm -rf TWReactNativeTwilioVideoWebrtc.xcworkspace/
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯ ll                              13:59:31
+total 360
+drwxr-xr-x   20 gaston  staff   680B Jun  4 13:59 ./
+drwxr-xr-x    8 gaston  staff   272B Jun  3 17:39 ../
+-rw-r--r--@   1 gaston  staff    14K Jun  4 13:59 .DS_Store
+drwxr-xr-x   17 gaston  staff   578B Jun  4 13:59 .git/
+-rw-r--r--    1 gaston  staff   1.4K Jun  3 21:45 .gitignore
+drwxr-xr-x   18 gaston  staff   612B Jun  4 12:36 example/
+-rw-r--r--    1 gaston  staff   212B May 30 20:40 index.js
+drwxr-xr-x   11 gaston  staff   374B Jun  4 13:58 ios/
+-rw-r--r--    1 gaston  staff   1.0K May 30 20:40 LICENSE
+drwxr-xr-x  472 gaston  staff    16K Jun  3 19:13 node_modules/
+-rw-r--r--    1 gaston  staff   539B Jun  3 18:54 package.json
+-rw-r--r--    1 gaston  staff   197B Jun  4 13:53 Podfile
+drwxr-xr-x    6 gaston  staff   204B Jun  4 13:59 Pods/
+-rw-r--r--    1 gaston  staff   2.9K Jun  3 20:22 README.md
+-rw-r--r--    1 gaston  staff   400B Jun  3 19:12 TwilioRemotePreview.js
+-rw-r--r--    1 gaston  staff   4.2K Jun  3 19:09 TwilioVideo.js
+-rw-r--r--    1 gaston  staff   324B May 30 20:40 TwilioVideo.test.js
+-rw-r--r--    1 gaston  staff   395B Jun  3 19:12 TwilioVideoPreview.js
+-rw-r--r--    1 gaston  staff   876B Jun  4 13:20 TWTwilioVideoReactNative.podspec
+-rw-r--r--    1 gaston  staff   114K Jun  3 19:13 yarn.lock
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯ open .                          13:59:38
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯ ll                              01:51:58
+total 360
+drwxr-xr-x  18 gaston  staff   612B Jun  4 14:00 ./
+drwxr-xr-x   8 gaston  staff   272B Jun  3 17:39 ../
+-rw-r--r--@  1 gaston  staff    12K Jun  4 14:00 .DS_Store
+drwxr-xr-x  17 gaston  staff   578B Jun  5 02:09 .git/
+-rw-r--r--   1 gaston  staff   1.4K Jun  3 21:45 .gitignore
+drwxr-xr-x  18 gaston  staff   612B Jun  5 01:50 example/
+-rw-r--r--   1 gaston  staff   212B May 30 20:40 index.js
+drwxr-xr-x   9 gaston  staff   306B Jun  4 13:59 ios/
+-rw-r--r--   1 gaston  staff   1.0K May 30 20:40 LICENSE
+-rw-r--r--   1 gaston  staff   539B Jun  3 18:54 package.json
+-rw-r--r--   1 gaston  staff   197B Jun  4 13:53 Podfile
+-rw-r--r--   1 gaston  staff   2.9K Jun  3 20:22 README.md
+-rw-r--r--   1 gaston  staff   400B Jun  3 19:12 TwilioRemotePreview.js
+-rw-r--r--   1 gaston  staff   4.2K Jun  3 19:09 TwilioVideo.js
+-rw-r--r--   1 gaston  staff   324B May 30 20:40 TwilioVideo.test.js
+-rw-r--r--   1 gaston  staff   395B Jun  3 19:12 TwilioVideoPreview.js
+-rw-r--r--   1 gaston  staff   876B Jun  4 13:20 TWTwilioVideoReactNative.podspec
+-rw-r--r--   1 gaston  staff   114K Jun  3 19:13 yarn.lock
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯ nano ios/                       02:09:58
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯ cd ios/                         02:10:11
+⋊> ~/D/P/t/r/ios on upgrade-1.0.1 ⨯ ll                                                         02:10:12
+total 88
+drwxr-xr-x   9 gaston  staff   306B Jun  4 13:59 ./
+drwxr-xr-x  18 gaston  staff   612B Jun  4 14:00 ../
+-rw-r--r--@  1 gaston  staff   6.0K Jun  4 13:59 .DS_Store
+-rw-r--r--   1 gaston  staff   224B May 30 20:40 TWRemotePreviewManager.h
+-rw-r--r--   1 gaston  staff   1.1K May 30 20:40 TWRemotePreviewManager.m
+-rw-r--r--   1 gaston  staff   1.3K May 30 20:40 TWVideoModule.h
+-rw-r--r--   1 gaston  staff    13K May 30 20:40 TWVideoModule.m
+-rw-r--r--   1 gaston  staff   248B May 30 20:40 TWVideoPreviewManager.h
+-rw-r--r--   1 gaston  staff   1.1K May 30 20:40 TWVideoPreviewManager.m
+⋊> ~/D/P/t/r/ios on upgrade-1.0.1 ⨯ ..                                                         02:10:13
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯ ll                              02:10:15
+total 360
+drwxr-xr-x  18 gaston  staff   612B Jun  4 14:00 ./
+drwxr-xr-x   8 gaston  staff   272B Jun  3 17:39 ../
+-rw-r--r--@  1 gaston  staff    12K Jun  4 14:00 .DS_Store
+drwxr-xr-x  17 gaston  staff   578B Jun  5 02:10 .git/
+-rw-r--r--   1 gaston  staff   1.4K Jun  3 21:45 .gitignore
+drwxr-xr-x  18 gaston  staff   612B Jun  5 02:10 example/
+-rw-r--r--   1 gaston  staff   212B May 30 20:40 index.js
+drwxr-xr-x   9 gaston  staff   306B Jun  4 13:59 ios/
+-rw-r--r--   1 gaston  staff   1.0K May 30 20:40 LICENSE
+-rw-r--r--   1 gaston  staff   539B Jun  3 18:54 package.json
+-rw-r--r--   1 gaston  staff   197B Jun  4 13:53 Podfile
+-rw-r--r--   1 gaston  staff   2.9K Jun  3 20:22 README.md
+-rw-r--r--   1 gaston  staff   400B Jun  3 19:12 TwilioRemotePreview.js
+-rw-r--r--   1 gaston  staff   4.2K Jun  3 19:09 TwilioVideo.js
+-rw-r--r--   1 gaston  staff   324B May 30 20:40 TwilioVideo.test.js
+-rw-r--r--   1 gaston  staff   395B Jun  3 19:12 TwilioVideoPreview.js
+-rw-r--r--   1 gaston  staff   876B Jun  4 13:20 TWTwilioVideoReactNative.podspec
+-rw-r--r--   1 gaston  staff   114K Jun  3 19:13 yarn.lock
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯ nano Podfile                    02:10:16
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯ rm Podfile                      02:10:20
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯ ll                              02:10:27
+total 352
+drwxr-xr-x  17 gaston  staff   578B Jun  5 02:10 ./
+drwxr-xr-x   8 gaston  staff   272B Jun  3 17:39 ../
+-rw-r--r--@  1 gaston  staff    12K Jun  4 14:00 .DS_Store
+drwxr-xr-x  17 gaston  staff   578B Jun  5 02:10 .git/
+-rw-r--r--   1 gaston  staff   1.4K Jun  3 21:45 .gitignore
+drwxr-xr-x  18 gaston  staff   612B Jun  5 02:10 example/
+-rw-r--r--   1 gaston  staff   212B May 30 20:40 index.js
+drwxr-xr-x   9 gaston  staff   306B Jun  4 13:59 ios/
+-rw-r--r--   1 gaston  staff   1.0K May 30 20:40 LICENSE
+-rw-r--r--   1 gaston  staff   539B Jun  3 18:54 package.json
+-rw-r--r--   1 gaston  staff   2.9K Jun  3 20:22 README.md
+-rw-r--r--   1 gaston  staff   400B Jun  3 19:12 TwilioRemotePreview.js
+-rw-r--r--   1 gaston  staff   4.2K Jun  3 19:09 TwilioVideo.js
+-rw-r--r--   1 gaston  staff   324B May 30 20:40 TwilioVideo.test.js
+-rw-r--r--   1 gaston  staff   395B Jun  3 19:12 TwilioVideoPreview.js
+-rw-r--r--   1 gaston  staff   876B Jun  4 13:20 TWTwilioVideoReactNative.podspec
+-rw-r--r--   1 gaston  staff   114K Jun  3 19:13 yarn.lock
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯ nano package.json               02:10:30
+⋊> ~/D/P/t/react-native-twilio-video-webrtc on upgrade-1.0.1 ⨯ cd example/                     02:10:38
+⋊> ~/D/P/t/r/example on upgrade-1.0.1 ⨯ ll                                                     02:10:41
+total 384
+drwxr-xr-x   18 gaston  staff   612B Jun  5 02:10 ./
+drwxr-xr-x   17 gaston  staff   578B Jun  5 02:10 ../
+-rw-r--r--    1 gaston  staff    34B Jun  3 19:16 .babelrc
+-rw-r--r--    1 gaston  staff   114B Jun  3 19:16 .buckconfig
+-rw-r--r--@   1 gaston  staff    10K Jun  4 13:48 .DS_Store
+-rw-r--r--    1 gaston  staff   1.4K Jun  3 19:16 .flowconfig
+-rw-r--r--    1 gaston  staff    16B Jun  3 19:16 .gitattributes
+-rw-r--r--    1 gaston  staff   774B Jun  3 19:16 .gitignore
+-rw-r--r--    1 gaston  staff     2B Jun  3 19:16 .watchmanconfig
+drwxr-xr-x    4 gaston  staff   136B Jun  3 19:16 __tests__/
+drwxr-xr-x   11 gaston  staff   374B Jun  3 19:16 android/
+-rw-r--r--    1 gaston  staff    67B Jun  3 19:16 app.json
+-rw-r--r--    1 gaston  staff   1.1K Jun  3 19:16 index.android.js
+-rw-r--r--    1 gaston  staff   2.1K Jun  4 13:06 index.ios.js
+drwxr-xr-x   12 gaston  staff   408B Jun  4 13:07 ios/
+drwxr-xr-x  559 gaston  staff    19K Jun  3 19:16 node_modules/
+-rw-r--r--    1 gaston  staff   447B Jun  3 19:16 package.json
+-rw-r--r--    1 gaston  staff   137K Jun  3 19:16 yarn.lock
+⋊> ~/D/P/t/r/example on upgrade-1.0.1 ⨯ nano package.json                                      02:10:42
+⋊> ~/D/P/t/r/example on upgrade-1.0.1 ⨯ ll                                                     02:10:55
+total 384
+drwxr-xr-x   18 gaston  staff   612B Jun  5 02:10 ./
+drwxr-xr-x   17 gaston  staff   578B Jun  5 02:10 ../
+-rw-r--r--    1 gaston  staff    34B Jun  3 19:16 .babelrc
+-rw-r--r--    1 gaston  staff   114B Jun  3 19:16 .buckconfig
+-rw-r--r--@   1 gaston  staff    10K Jun  4 13:48 .DS_Store
+-rw-r--r--    1 gaston  staff   1.4K Jun  3 19:16 .flowconfig
+-rw-r--r--    1 gaston  staff    16B Jun  3 19:16 .gitattributes
+-rw-r--r--    1 gaston  staff   774B Jun  3 19:16 .gitignore
+-rw-r--r--    1 gaston  staff     2B Jun  3 19:16 .watchmanconfig
+drwxr-xr-x    4 gaston  staff   136B Jun  3 19:16 __tests__/
+drwxr-xr-x   11 gaston  staff   374B Jun  3 19:16 android/
+-rw-r--r--    1 gaston  staff    67B Jun  3 19:16 app.json
+-rw-r--r--    1 gaston  staff   1.1K Jun  3 19:16 index.android.js
+-rw-r--r--    1 gaston  staff   2.1K Jun  4 13:06 index.ios.js
+drwxr-xr-x   12 gaston  staff   408B Jun  4 13:07 ios/
+drwxr-xr-x  559 gaston  staff    19K Jun  3 19:16 node_modules/
+-rw-r--r--    1 gaston  staff   447B Jun  3 19:16 package.json
+-rw-r--r--    1 gaston  staff   137K Jun  3 19:16 yarn.lock
+⋊> ~/D/P/t/r/example on upgrade-1.0.1 ⨯ nano app.json                                          02:10:57
+⋊> ~/D/P/t/r/example on upgrade-1.0.1 ⨯ rm -rf node_modules/                                   02:11:01
+⋊> ~/D/P/t/r/example on upgrade-1.0.1 ⨯ yarn                                                   02:11:18
+yarn install v0.24.6
+[1/4] 🔍  Resolving packages...
+[2/4] 🚚  Fetching packages...
+[3/4] 🔗  Linking dependencies...
+[4/4] 📃  Building fresh packages...
+✨  Done in 10.12s.
+⋊> ~/D/P/t/r/example on upgrade-1.0.1 ⨯ ll                                                     02:11:39
+total 384
+drwxr-xr-x   18 gaston  staff   612B Jun  5 02:11 ./
+drwxr-xr-x   17 gaston  staff   578B Jun  5 02:10 ../
+-rw-r--r--    1 gaston  staff    34B Jun  3 19:16 .babelrc
+-rw-r--r--    1 gaston  staff   114B Jun  3 19:16 .buckconfig
+-rw-r--r--@   1 gaston  staff    10K Jun  4 13:48 .DS_Store
+-rw-r--r--    1 gaston  staff   1.4K Jun  3 19:16 .flowconfig
+-rw-r--r--    1 gaston  staff    16B Jun  3 19:16 .gitattributes
+-rw-r--r--    1 gaston  staff   774B Jun  3 19:16 .gitignore
+-rw-r--r--    1 gaston  staff     2B Jun  3 19:16 .watchmanconfig
+drwxr-xr-x    4 gaston  staff   136B Jun  3 19:16 __tests__/
+drwxr-xr-x   11 gaston  staff   374B Jun  3 19:16 android/
+-rw-r--r--    1 gaston  staff    67B Jun  3 19:16 app.json
+-rw-r--r--    1 gaston  staff   1.1K Jun  3 19:16 index.android.js
+-rw-r--r--    1 gaston  staff   2.1K Jun  4 13:06 index.ios.js
+drwxr-xr-x   12 gaston  staff   408B Jun  4 13:07 ios/
+drwxr-xr-x  558 gaston  staff    19K Jun  5 02:11 node_modules/
+-rw-r--r--    1 gaston  staff   447B Jun  3 19:16 package.json
+-rw-r--r--    1 gaston  staff   137K Jun  3 19:16 yarn.lock
+⋊> ~/D/P/t/r/example on upgrade-1.0.1 ⨯ cd ios/                                                02:11:49
+⋊> ~/D/P/t/r/e/ios on upgrade-1.0.1 ⨯ ll                                                       02:11:51
+total 40
+drwxr-xr-x  12 gaston  staff   408B Jun  4 13:07 ./
+drwxr-xr-x  18 gaston  staff   612B Jun  5 02:11 ../
+-rw-r--r--@  1 gaston  staff    10K Jun  4 13:48 .DS_Store
+-rw-r--r--@  1 gaston  staff   251B Jun  4 13:45 Podfile
+-rw-r--r--   1 gaston  staff   564B Jun  5 02:10 Podfile.lock
+drwxr-xr-x  10 gaston  staff   340B Jun  5 02:09 Pods/
+drwxr-xr-x   9 gaston  staff   306B Jun  3 21:29 rntwilioexample/
+drwxr-xr-x   3 gaston  staff   102B Jun  3 19:16 rntwilioexample-tvOS/
+drwxr-xr-x   3 gaston  staff   102B Jun  3 19:16 rntwilioexample-tvOSTests/
+drwxr-xr-x@  5 gaston  staff   170B Jun  4 13:46 rntwilioexample.xcodeproj/
+drwxr-xr-x   4 gaston  staff   136B Jun  3 20:14 rntwilioexample.xcworkspace/
+drwxr-xr-x   4 gaston  staff   136B Jun  3 19:16 rntwilioexampleTests/
+⋊> ~/D/P/t/r/e/ios on upgrade-1.0.1 ⨯ rm -rf Pods/                                             02:11:52
+⋊> ~/D/P/t/r/e/ios on upgrade-1.0.1 ⨯ ll                                                       02:11:57
+total 40
+drwxr-xr-x  11 gaston  staff   374B Jun  5 02:11 ./
+drwxr-xr-x  18 gaston  staff   612B Jun  5 02:11 ../
+-rw-r--r--@  1 gaston  staff    10K Jun  4 13:48 .DS_Store
+-rw-r--r--@  1 gaston  staff   251B Jun  4 13:45 Podfile
+-rw-r--r--   1 gaston  staff   564B Jun  5 02:10 Podfile.lock
+drwxr-xr-x   9 gaston  staff   306B Jun  3 21:29 rntwilioexample/
+drwxr-xr-x   3 gaston  staff   102B Jun  3 19:16 rntwilioexample-tvOS/
+drwxr-xr-x   3 gaston  staff   102B Jun  3 19:16 rntwilioexample-tvOSTests/
+drwxr-xr-x@  5 gaston  staff   170B Jun  4 13:46 rntwilioexample.xcodeproj/
+drwxr-xr-x   4 gaston  staff   136B Jun  3 20:14 rntwilioexample.xcworkspace/
+drwxr-xr-x   4 gaston  staff   136B Jun  3 19:16 rntwilioexampleTests/
+⋊> ~/D/P/t/r/e/ios on upgrade-1.0.1 ⨯ rm Podfile.lock                                          02:11:58
+⋊> ~/D/P/t/r/e/ios on upgrade-1.0.1 ⨯ ll                                                       02:12:03
+total 32
+drwxr-xr-x  10 gaston  staff   340B Jun  5 02:12 ./
+drwxr-xr-x  18 gaston  staff   612B Jun  5 02:11 ../
+-rw-r--r--@  1 gaston  staff    10K Jun  4 13:48 .DS_Store
+-rw-r--r--@  1 gaston  staff   251B Jun  4 13:45 Podfile
+drwxr-xr-x   9 gaston  staff   306B Jun  3 21:29 rntwilioexample/
+drwxr-xr-x   3 gaston  staff   102B Jun  3 19:16 rntwilioexample-tvOS/
+drwxr-xr-x   3 gaston  staff   102B Jun  3 19:16 rntwilioexample-tvOSTests/
+drwxr-xr-x@  5 gaston  staff   170B Jun  4 13:46 rntwilioexample.xcodeproj/
+drwxr-xr-x   4 gaston  staff   136B Jun  3 20:14 rntwilioexample.xcworkspace/
+drwxr-xr-x   4 gaston  staff   136B Jun  3 19:16 rntwilioexampleTests/
+⋊> ~/D/P/t/r/e/ios on upgrade-1.0.1 ⨯ pod install                                              02:12:04
+Analyzing dependencies
+Fetching podspec for `TWTwilioVideoReactNative` from `../../`
+Downloading dependencies
+Installing PureLayout (3.0.2)
+Installing TWTwilioVideoReactNative (1.0.1)
+Installing TwilioVideo (1.0.1)
+Generating Pods project
+Integrating client project
+Sending stats
+Pod installation complete! There are 3 dependencies from the Podfile and 3 total pods installed.
+
+[!] [Xcodeproj] Generated duplicate UUIDs:
+
+PBXBuildFile -- /targets/buildConfigurationList:buildConfigurations:baseConfigurationReference:|,buildSettings:|,displayName:|,isa:|,name:|,,baseConfigurationReference:|,buildSettings:|,displayName:|,isa:|,name:|,,defaultConfigurationIsVisible:0,defaultConfigurationName:Release,displayName:ConfigurationList,isa:XCConfigurationList,,buildPhases:buildActionMask:2147483647,displayName:Sources,files:|,isa:PBXSourcesBuildPhase,runOnlyForDeploymentPostprocessing:0,,buildActionMask:2147483647,displayName:Frameworks,files:|,isa:PBXFrameworksBuildPhase,runOnlyForDeploymentPostprocessing:0,,buildActionMask:2147483647,displayName:Headers,files:|,isa:PBXHeadersBuildPhase,runOnlyForDeploymentPostprocessing:0,,buildRules:,dependencies:displayName:PureLayout,isa:PBXTargetDependency,,displayName:TWTwilioVideoReactNative,isa:PBXTargetDependency,,displayName:Pods-rntwilioexample,isa:PBXNativeTarget,name:Pods-rntwilioexample,productName:Pods-rntwilioexample,productReference:displayName:Pods_rntwilioexample.framework,explicitFileType:wrapper.framework,includeInIndex:0,isa:PBXFileReference,name:Pods_rntwilioexample.framework,path:Pods-rntwilioexample.framework,sourceTree:BUILT_PRODUCTS_DIR,,productType:com.apple.product-type.framework,/dependencies/displayName:TWTwilioVideoReactNative,isa:PBXTargetDependency,/target/buildPhases/buildActionMask:2147483647,displayName:Sources,files:displayName:ALView+PureLayout.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,name:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:AppDelegate.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:AppDelegate.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:ARTBrush.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:ARTGroup.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:ARTGroupManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:ARTLinearGradient.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:ARTNode.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:ARTNodeManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:ARTPattern.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:ARTRadialGradient.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:ARTRenderable.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:ARTRenderableManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:ARTShape.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:ARTShapeManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:ARTSolidColor.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:ARTSurfaceView.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:ARTSurfaceViewManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:ARTText.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:ARTTextManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:FBSnapshotTestCase.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:FBSnapshotTestController.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:HelloWorldTests.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:JSCSamplingProfiler.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:main.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:main.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:NSArray+PureLayout.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,name:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:NSLayoutConstraint+PureLayout.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,name:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTAccessibilityManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTActionSheetManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTActivityIndicatorView.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTActivityIndicatorViewManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTAdditionAnimatedNode.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTAdSupport.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTAlertManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTAnimatedNode.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTAnimationUtils.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTAppState.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTAssert.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTAssetsLibraryRequestHandler.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTAsyncLocalStorage.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTBatchedBridge.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTBorderDrawing.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTBridge.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTBundleURLProvider.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTCameraRollManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTClipboard.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTComponentData.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTConvert+ART.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTConvert+CoreLocation.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTConvert+Text.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTConvert+Transform.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTConvert.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTDataRequestHandler.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTDatePicker.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTDatePickerManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTDeviceInfo.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTDevLoadingView.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTDevMenu.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTDiffClampAnimatedNode.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTDisplayLink.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTDivisionAnimatedNode.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTErrorInfo.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTEventAnimation.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTEventDispatcher.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTEventEmitter.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTExceptionsManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTFileRequestHandler.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTFPSGraph.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTFrameAnimation.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTFrameUpdate.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTGIFImageDecoder.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTI18nManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTI18nUtil.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTImageBlurUtils.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTImageCache.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTImageEditingManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTImageLoader.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTImagePickerManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTImageSource.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTImageStoreManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTImageUtils.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTImageView.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTImageViewManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTInterpolationAnimatedNode.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTJSCProfiler.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTJSStackFrame.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTKeyboardObserver.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTKeyCommands.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTLinkingManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTLocalAssetImageLoader.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTLocationObserver.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTModalHostView.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTModalHostViewController.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTModalHostViewManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTModuleMethod.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTModuloAnimatedNode.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTMultipartDataTask.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTMultipartStreamReader.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTMultiplicationAnimatedNode.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTNativeAnimatedModule.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTNativeAnimatedNodesManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTNavigator.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTNavigatorManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTNavItem.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTNavItemManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTNetInfo.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTNetworkTask.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTPackagerClient.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTPackagerClientResponder.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTParserUtils.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTPerfMonitor.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTPerformanceLogger.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTPhotoLibraryImageLoader.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTPicker.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTPickerManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTPlatform.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTProfile.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTProgressViewManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTPropsAnimatedNode.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTPushNotificationManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTRawTextManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTReconnectingWebSocket.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTRedBox.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTRefreshControl.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTRefreshControlManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTReloadCommand.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTReloadPackagerMethod.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTResizeMode.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTRootContentView.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTRootShadowView.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTRootView.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTScrollContentShadowView.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTScrollContentViewManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTScrollView.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTScrollViewManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTSegmentedControl.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTSegmentedControlManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTSettingsManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTShadowRawText.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTShadowText.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTShadowTextField.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTShadowTextView.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTShadowView.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTSlider.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTSliderManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTSnapshotManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTSourceCode.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTSpringAnimation.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTSRWebSocket.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTStatusBarManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTStyleAnimatedNode.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTSwitch.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTSwitchManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTTabBar.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTTabBarItem.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTTabBarItemManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTTabBarManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTTestModule.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTTestRunner.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTText.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTTextField.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTTextFieldManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTTextManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTTextSelection.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTTextView.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTTextViewManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTTiming.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTTouchEvent.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTTouchHandler.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTTransformAnimatedNode.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTTVNavigationEventEmitter.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTTVRemoteHandler.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTTVView.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTUIManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTUITextView.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTUtils.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTValueAnimatedNode.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTVibration.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTView.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTViewManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTWebSocketExecutor.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTWebSocketModule.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTWebSocketObserver.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTWebView.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTWebViewManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTWrapperViewController.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:rntwilioexampleTests.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:Sample.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:TWRemotePreviewManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:TWTwilioVideoReactNative-dummy.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,,displayName:TWVideoModule.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:TWVideoPreviewManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:UIImage+Compare.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:UIImage+Diff.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:UIView+React.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,isa:PBXSourcesBuildPhase,runOnlyForDeploymentPostprocessing:0,/files/displayName:AppDelegate.m,fileRef:displayName:AppDelegate.m,includeInIndex:1,isa:PBXFileReference,lastKnownFileType:sourcecode.c.objc,path:AppDelegate.m,sourceTree:<group>,,isa:PBXBuildFile,settings:COMPILER_FLAGS:-DOS_OBJECT_USE_OBJC=0,,
+PBXBuildFile -- /targets/buildConfigurationList:buildConfigurations:baseConfigurationReference:|,buildSettings:|,displayName:|,isa:|,name:|,,baseConfigurationReference:|,buildSettings:|,displayName:|,isa:|,name:|,,defaultConfigurationIsVisible:0,defaultConfigurationName:Release,displayName:ConfigurationList,isa:XCConfigurationList,,buildPhases:buildActionMask:2147483647,displayName:Sources,files:|,isa:PBXSourcesBuildPhase,runOnlyForDeploymentPostprocessing:0,,buildActionMask:2147483647,displayName:Frameworks,files:|,isa:PBXFrameworksBuildPhase,runOnlyForDeploymentPostprocessing:0,,buildActionMask:2147483647,displayName:Headers,files:|,isa:PBXHeadersBuildPhase,runOnlyForDeploymentPostprocessing:0,,buildRules:,dependencies:displayName:PureLayout,isa:PBXTargetDependency,,displayName:TWTwilioVideoReactNative,isa:PBXTargetDependency,,displayName:Pods-rntwilioexample,isa:PBXNativeTarget,name:Pods-rntwilioexample,productName:Pods-rntwilioexample,productReference:displayName:Pods_rntwilioexample.framework,explicitFileType:wrapper.framework,includeInIndex:0,isa:PBXFileReference,name:Pods_rntwilioexample.framework,path:Pods-rntwilioexample.framework,sourceTree:BUILT_PRODUCTS_DIR,,productType:com.apple.product-type.framework,/dependencies/displayName:TWTwilioVideoReactNative,isa:PBXTargetDependency,/target/buildPhases/buildActionMask:2147483647,displayName:Sources,files:displayName:ALView+PureLayout.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,name:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:AppDelegate.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:AppDelegate.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:ARTBrush.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:ARTGroup.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:ARTGroupManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:ARTLinearGradient.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:ARTNode.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:ARTNodeManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:ARTPattern.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:ARTRadialGradient.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:ARTRenderable.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:ARTRenderableManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:ARTShape.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:ARTShapeManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:ARTSolidColor.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:ARTSurfaceView.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:ARTSurfaceViewManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:ARTText.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:ARTTextManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:FBSnapshotTestCase.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:FBSnapshotTestController.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:HelloWorldTests.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:JSCSamplingProfiler.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:main.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:main.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:NSArray+PureLayout.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,name:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:NSLayoutConstraint+PureLayout.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,name:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTAccessibilityManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTActionSheetManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTActivityIndicatorView.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTActivityIndicatorViewManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTAdditionAnimatedNode.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTAdSupport.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTAlertManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTAnimatedNode.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTAnimationUtils.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTAppState.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTAssert.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTAssetsLibraryRequestHandler.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTAsyncLocalStorage.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTBatchedBridge.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTBorderDrawing.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTBridge.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTBundleURLProvider.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTCameraRollManager.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTClipboard.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTComponentData.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTConvert+ART.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTConvert+CoreLocation.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTConvert+Text.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTConvert+Transform.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTConvert.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,settings:COMPILER_FLAGS:|,,,displayName:RCTDataRequestHandler.m,fileRef:displayName:|,includeInIndex:|,isa:|,lastKnownFileType:|,path:|,sourceTree:|,,isa:PBXBuildFile,setti
+
+end
+

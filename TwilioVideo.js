@@ -3,12 +3,29 @@ import {
   NativeModules,
   NativeEventEmitter,
   View,
-} from 'react-native';
+} from 'react-native'
 
-const {TWVideoModule} = NativeModules
+const { TWVideoModule } = NativeModules
 
+export default class extends Component {
 
-export default class TwilioVideo extends Component {
+  static propTypes = {
+    onRoomDidConnect: PropTypes.func,
+    onRoomDidDisconnect: PropTypes.func,
+    onRoomDidFailToConnect: PropTypes.func,
+    onRoomParticipantDidConnect: PropTypes.func,
+    onRoomParticipantDidDisconnect: PropTypes.func,
+    onParticipantAddedVideoTrack: PropTypes.func,
+    onParticipantRemovedVideoTrack: PropTypes.func,
+    onParticipantAddedAudioTrack: PropTypes.func,
+    onParticipantRemovedAudioTrack: PropTypes.func,
+    onParticipantEnabledTrack: PropTypes.func,
+    onParticipantDisabledTrack: PropTypes.func,
+    onCameraDidStart: PropTypes.func,
+    onCameraWasInterrumpted: PropTypes.func,
+    onCameraDidStopRunning: PropTypes.func,
+    ...View.propTypes
+  }
 
   state = {
 
@@ -120,30 +137,8 @@ export default class TwilioVideo extends Component {
     this._unregisterEvents()
   }
 
-
   render() {
     return this.props.children || null
   }
+
 }
-
-
-TwilioVideo.propTypes = {
-    onRoomDidConnect: PropTypes.func,
-    onRoomDidDisconnect: PropTypes.func,
-    onRoomDidFailToConnect: PropTypes.func,
-    onRoomParticipantDidConnect: PropTypes.func,
-    onRoomParticipantDidDisconnect: PropTypes.func,
-    onParticipantAddedVideoTrack: PropTypes.func,
-    onParticipantRemovedVideoTrack: PropTypes.func,
-    onParticipantAddedAudioTrack: PropTypes.func,
-    onParticipantRemovedAudioTrack: PropTypes.func,
-    onParticipantEnabledTrack: PropTypes.func,
-    onParticipantDisabledTrack: PropTypes.func,
-    onCameraDidStart: PropTypes.func,
-    onCameraWasInterrumpted: PropTypes.func,
-    onCameraDidStopRunning: PropTypes.func,
-    ...View.propTypes,
-}
-
-// TwilioVideo.defaultProps = {
-// }
