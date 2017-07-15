@@ -1,7 +1,7 @@
 PODS:
   - React (0.44.0):
     - React/Core (= 0.44.0)
-  - react-native-twilio-video-webrtc (1.0.1.0):
+  - react-native-twilio-video-webrtc (1.0.2):
     - React
     - TwilioVideo (>= 1.0.1)
   - React/Core (0.44.0):
@@ -28,7 +28,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   React: d2077cc20245ccdc8bfe1fdc002f2003318ae8d8
-  react-native-twilio-video-webrtc: 6d4633518af04efe4e09a0ebd92badac451fdaac
+  react-native-twilio-video-webrtc: bb511e0dd20aa14c93a42c94dd6c236f3393c4d4
   TwilioVideo: 2a41b5557ab6dc343beb57e395fdc4da5a6e3450
   Yoga: a92a5d8e128905bf9f29c82f870192a6e873dd98
 
