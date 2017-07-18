@@ -14,13 +14,15 @@ const CONNECT_STATUSES = {
   DISCONNECTED: 'disconnected',
 };
 
+const { accessToken: { demoUser1, demoUser2 }, roomName } = require('./credentials.json');
+
 /* eslint-disable no-console */
 
 export default class TwilioConnector extends React.PureComponent {
   state = {
-    accessToken: null,
+    roomName,
+    accessToken: demoUser1,
     isAudioEnabled: true,
-    roomName: 'demoRoom',
     status: CONNECT_STATUSES.DISCONNECTED,
     videoTracks: {},
   }
@@ -100,8 +102,10 @@ export default class TwilioConnector extends React.PureComponent {
   };
 
   renderCallScreen = () => {
-    const { isAudioEnabled } = this.state;
+    const { isAudioEnabled, status } = this.state;
     const audioStatus = isAudioEnabled ? 'Mute' : 'Unmute';
+
+    console.log(status);
 
     return (
       <View style={styles.callContainer}>

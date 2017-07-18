@@ -1,20 +1,13 @@
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
- * @flow
  */
 
-import React, { Component } from 'react';
+import React from 'react';
 import { AppRegistry } from 'react-native';
 
-import TwillioConnector from './TwillioConnector';
+import TwilioConnector from './TwilioConnector';
 
-export default class Example extends Component {
-  render() {
-    return (
-      <TwillioConnector />
-    );
-  }
-}
+const Example = () => <TwilioConnector />;
 
 AppRegistry.registerComponent('Example', () => Example);
